@@ -17,7 +17,10 @@ from .configs import MIN_ANSWER_CHAR_LEN, MAX_ANSWER_CHAR_LEN,\
     NOUNPHRASE_LABEL, SPACY_MODEL
 from .data_classes import Cloze
 
-nlp = spacy.load(SPACY_MODEL)
+!pip install scispacy
+!pip install 'https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.2.4/en_core_sci_md-0.2.4.tar.gz'
+import en_core_sci_md
+nlp = en_core_sci_md.load(disable=["tagger", "parser", "ner"])
 
 
 def mask_answer(text, answer_text, answer_start, answer_type):
