@@ -18,7 +18,7 @@ from .configs import MIN_ANSWER_CHAR_LEN, MAX_ANSWER_CHAR_LEN,\
 from .data_classes import Cloze
 import scispacy
 import en_core_sci_md
-nlp = en_core_sci_md.load()
+nlp = spacy.load(SPACY_MODEL)
 
 
 def mask_answer(text, answer_text, answer_start, answer_type):
