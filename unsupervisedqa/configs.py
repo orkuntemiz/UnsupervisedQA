@@ -41,9 +41,9 @@ MAX_QUESTION_WORDSIZE_THRESHOLD = 200
 
 ## Spacy Configs:
 SPACY_MODEL = 'en_core_sci_md'
-
+SCISPACY_MODEL='https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.2.4/en_core_sci_md-0.2.4.tar.gz'
 ## constituency parser configs:
-CONSTITUENCY_MODEL = "https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.2.4/en_core_sci_md-0.2.4.tar.gz"
+CONSTITUENCY_MODEL = "https://s3-us-west-2.amazonaws.com/allennlp/models/elmo-constituency-parser-2018.03.14.tar.gz"
 CONSTITUENCY_BATCH_SIZE = 32
 CONSTITUENCY_CUDA = 0
 CLOZE_SYNTACTIC_TYPES = {'S', }
