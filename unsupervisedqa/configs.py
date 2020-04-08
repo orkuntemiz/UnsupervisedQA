@@ -28,15 +28,7 @@ MIN_ANSWER_WORD_LEN = 1
 MAX_ANSWER_WORD_LEN = 20
 MIN_ANSWER_CHAR_LEN = 3
 MAX_ANSWER_CHAR_LEN = 50
-## remove  with more characters than this
-MAX_PARAGRAPH_CHAR_LEN_THRESHOLD = 2000
-MAX_QUESTION_CHAR_LEN_THRESHOLD = 200
-## remove items with more words than this
-MAX_PARAGRAPH_WORD_LEN_THRESHOLD = 400
-MAX_QUESTION_WORD_LEN_THRESHOLD = 40
-## remove items that have words with more characters than this
-MAX_PARAGRAPH_WORDSIZE_THRESHOLD = 20
-MAX_QUESTION_WORDSIZE_THRESHOLD = 20
+
 
 
 ## Spacy Configs:
