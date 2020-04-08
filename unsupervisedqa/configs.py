@@ -72,6 +72,7 @@ NOUNPHRASE_LABEL = 'NOUNPHRASE'
 CLOZE_MASKS = {
     'PERSON': 'IDENTITYMASK',
     'NORP': 'IDENTITYMASK',
+    'ENTITY': 'IDENTITYMASK',
     'FAC': 'PLACEMASK',
     'ORG': 'IDENTITYMASK',
     'GPE': 'PLACEMASK',
@@ -94,6 +95,7 @@ CLOZE_MASKS = {
 HEURISTIC_CLOZE_TYPE_QUESTION_MAP = {
     'PERSON': ['Who', ],
     'NORP': ['Who', ],
+    'ENTITY': ['What', ],
     'FAC': ['Where', ],
     'ORG': ['Who', ],
     'GPE': ['Where', ],
