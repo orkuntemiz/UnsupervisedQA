@@ -57,9 +57,9 @@ def is_appropriate_squad_datapoint(question_text, answer_text, paragraph_text):
 
     q_char_len_good = len(question_text) <= MAX_QUESTION_CHAR_LEN_THRESHOLD
     q_word_len_good = len(question_text.split()) <= MAX_QUESTION_WORD_LEN_THRESHOLD
-    q_word_len_good = len(question_text.split()) >= MIN_QUESTION_WORD_LEN_THRESHOLD
+    q_word_len_good1 = len(question_text.split()) >= MIN_QUESTION_WORD_LEN_THRESHOLD
     q_wordsize_good = all([len(w) <= MAX_QUESTION_WORDSIZE_THRESHOLD for w in question_text.split()])
-    q_good = q_char_len_good and q_word_len_good and q_wordsize_good
+    q_good = q_char_len_good and q_word_len_good and q_wordsize_good and q_word_len_good1
 
     a_char_len_good = MIN_ANSWER_CHAR_LEN <= len(answer_text) <= MAX_ANSWER_CHAR_LEN
     a_word_len_good = MIN_ANSWER_WORD_LEN <= len(answer_text.split()) <= MAX_ANSWER_WORD_LEN
