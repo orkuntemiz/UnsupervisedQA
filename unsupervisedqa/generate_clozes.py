@@ -12,7 +12,7 @@ import hashlib
 from .configs import MIN_ANSWER_CHAR_LEN, MAX_ANSWER_CHAR_LEN,\
     MIN_ANSWER_WORD_LEN, MAX_ANSWER_WORD_LEN, CLOZE_MASKS, MIN_CLOZE_WORD_LEN, MAX_CLOZE_WORD_LEN,\
     MIN_CLOZE_WORDSIZE, MAX_CLOZE_WORDSIZE, MIN_CLOZE_CHAR_LEN, MAX_CLOZE_CHAR_LEN,  \
-    MAX_QUESTION_WORDSIZE_THRESHOLD, MAX_PARAGRAPH_WORDSIZE_THRESHOLD, MAX_PARAGRAPH_CHAR_LEN_THRESHOLD, \
+    MAX_QUESTION_WORDSIZE_THRESHOLD,MIN_QUESTION_WORD_LEN_THRESHOLD, MAX_PARAGRAPH_WORDSIZE_THRESHOLD, MAX_PARAGRAPH_CHAR_LEN_THRESHOLD, \
     MAX_PARAGRAPH_WORD_LEN_THRESHOLD, MAX_QUESTION_CHAR_LEN_THRESHOLD, MAX_QUESTION_WORD_LEN_THRESHOLD, \
     NOUNPHRASE_LABEL, SPACY_MODEL #,SCISPACY_MODEL
 from .data_classes import Cloze
@@ -57,6 +57,7 @@ def is_appropriate_squad_datapoint(question_text, answer_text, paragraph_text):
 
     q_char_len_good = len(question_text) <= MAX_QUESTION_CHAR_LEN_THRESHOLD
     q_word_len_good = len(question_text.split()) <= MAX_QUESTION_WORD_LEN_THRESHOLD
+    q_word_len_good = len(question_text.split()) >= MIN_QUESTION_WORD_LEN_THRESHOLD
     q_wordsize_good = all([len(w) <= MAX_QUESTION_WORDSIZE_THRESHOLD for w in question_text.split()])
     q_good = q_char_len_good and q_word_len_good and q_wordsize_good
 
